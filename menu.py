@@ -154,7 +154,8 @@ while place_order:
                                     break
                                     
                                 else:                                   
-                                    print("input is not a number, pick a number") 
+                                    print("input is not a number, defalut quantity is set to 1")
+                                    quantity = 1
                             break                      
                         else:
                             print("this is not a valid menu item number")  
@@ -175,30 +176,44 @@ while place_order:
             print("You didn't select a number.")
         break    
 
-    while True:
+
         # Ask the customer if they would like to order anything else
-        keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
-
         # 5. Check the customer's input
-        if keep_ordering == "y" or keep_ordering == "Y":
-            # Keep ordering
-            print("What else would you like to order?")
-            break
-                    # Exit the keep ordering question loop
+    while True:
+        keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
+        match keep_ordering:
+            case "y":
+                print("What else would you like to order?")
+                break
+            case "n":
+                print("Thank you for your order.")
+                place_order = False
+                break
+            case _:
+                print("Please try again.")
 
-                    # Complete the order
+            
+            
 
-                    # Since the customer decided to stop ordering, thank them for
-                    # their order
-        elif keep_ordering == "n" or keep_ordering == "N":
+        # if keep_ordering == "y" or keep_ordering == "Y":
+        #     # Keep ordering
+        #     print("What else would you like to order?")
+        #     break
+        #             # Exit the keep ordering question loop
 
-            print("Thank you for your order.")
-                    # Exit the keep ordering question loop
-            place_order = False   
-            break
-            # Tell the customer to try again
-        else:
-            print("Please try again.")  
+        #             # Complete the order
+
+        #             # Since the customer decided to stop ordering, thank them for
+        #             # their order
+        # elif keep_ordering == "n" or keep_ordering == "N":
+
+        #     print("Thank you for your order.")
+        #             # Exit the keep ordering question loop
+        #     place_order = False   
+        #     break
+        #     # Tell the customer to try again
+        # else:
+        #     print("Please try again.")  
     
         
 
