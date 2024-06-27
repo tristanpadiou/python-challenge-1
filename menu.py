@@ -180,7 +180,7 @@ while place_order:
         # Ask the customer if they would like to order anything else
         # 5. Check the customer's input
     while True:
-        keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
+        keep_ordering = input("Would you like to keep ordering? (y)es or (n)o ")
         match keep_ordering:
             case "y":
                 print("What else would you like to order?")
